@@ -122,9 +122,9 @@ Data Visualization (Matplotlib, Seaborn, WordCloud)
 
 Survey Data Analysis
 
-🤝 Acknowledgements
+ Acknowledgements
 Internship at FUTURE INTERNS
 
 Project under Data Science & Analytics Internship
 
-Thanks to the college event team for data collection support
+
