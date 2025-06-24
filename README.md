@@ -1,130 +1,109 @@
-# FURUTRE_DS_03
+ # 🎓 College Event Feedback Analysis
 
-📊 College Event Feedback Analysis
-Internship Project - Data Science & Analytics
-Analyze student feedback to uncover satisfaction trends and suggest improvements using survey data.
+This project analyzes feedback from students about a college event using sentiment analysis, data visualization, and word cloud generation to understand what attendees liked and what can be improved.
 
-🎯 Project Objective
-This project analyzes student feedback from various college events to:
+---
 
-Understand satisfaction levels
+## 📊 Project Overview
 
-Perform sentiment analysis on textual responses
+Using a CSV dataset collected from event attendees, this project performs the following tasks:
 
-Visualize trends in ratings and feedback
+- **Data cleaning** and preprocessing
+- **Sentiment analysis** on qualitative feedback
+- **Rating distribution** visualization
+- **Word clouds** for most common likes and suggestions
+- **Summary statistics** including average rating and top suggestions
 
-Provide actionable recommendations for future event improvements
+---
 
-🗂️ Dataset
-Collected via Google Forms
+## 📁 Dataset
 
-Exported to CSV format
+The project expects a CSV file named:
 
-Contains fields:
+data/feedback.csv
 
-Event Name
 
-Event Date
 
-Overall Rating (1–5)
+The CSV should contain at least these columns:
+- `Overall Rating` – Numeric rating (e.g., 1 to 5)
+- `What did you like about the event?`
+- `What could be improved?`
 
-What did you like about the event? (Text)
+---
 
-What could be improved? (Text)
+## 🛠️ Libraries Used
 
-Would you attend again? (Yes/No)
+Install the required Python libraries using:
 
-Any other comments?
+```bash
+pip install pandas matplotlib seaborn wordcloud textblob
+For TextBlob, also run:
 
-🛠️ Tools & Libraries
-Python
 
-Pandas
-
-Matplotlib & Seaborn (for visualization)
-
-TextBlob (for sentiment analysis)
-
-WordCloud (for visual text insights)
-
-Google Colab / Jupyter / VS Code
-
-🚀 Project Workflow
-Data Cleaning
-
-Handle missing data
-
-Drop empty feedback rows
-
-Sentiment Analysis
-
-Analyze polarity of textual feedback
-
-Classify as Positive / Negative / Neutral
-
-Visualization
-
-Rating distribution
-
-Sentiment distribution
-
-WordCloud of what students liked
-
-WordCloud of suggestions for improvement
-
-Insights
-
-Average event ratings
-
-Most common feedback themes
-
-Improvement areas
-
-📈 Example Results
-Average rating across all events: 4.2/5
-
-72% Positive sentiment in feedback
-
-Common suggestions: better time management, more variety, improved sound systems
-
-📝 How to Run
-Install dependencies:
-
-bash
-Copy
-Edit
-pip install pandas seaborn matplotlib textblob wordcloud
 python -m textblob.download_corpora
-Run the notebook:
+📈 Key Functionalities
+✅ Data Cleaning
+Drops rows with missing feedback
 
-In VS Code or Jupyter:
+Resets DataFrame index
 
-css
+💬 Sentiment Analysis
+Uses TextBlob to analyze polarity of feedback on “What did you like about the event?”
+
+Classifies each entry as Positive, Negative, or Neutral
+
+📊 Visualizations
+Rating Distribution – Using Seaborn countplot
+
+Sentiment Distribution – Count of sentiments from student feedback
+
+Word Clouds:
+
+What students liked
+
+What could be improved
+
+📌 Summary Stats
+Total sentiment counts
+
+Average event rating
+
+Most common improvement suggestions
+
+📷 Sample Outputs
+Bar charts for rating and sentiment distribution
+
+Word clouds highlighting keywords in feedback
+
+Console output for sentiment counts and suggestions
+
+📂 Folder Structure
+arduino
 Copy
 Edit
-main.ipynb
-Or in Python script:
+├── data/
+│   └── feedback.csv
+├── feedback_analysis.ipynb  # or .py
+├── README.md
+🧠 Possible Improvements
+Add time-series feedback if event spanned multiple days
 
-css
-Copy
-Edit
-main.py
-Place your CSV file in /data/feedback.csv
+Include demographic filters (year, branch, etc.)
 
-📚 Skills Learned
-Data Cleaning & Preprocessing
+Add sentiment analysis for suggestions as well
 
-Sentiment Analysis (TextBlob)
+👨‍💻 Author
+Ayus Das
+BCA Student | Python Developer | AI Enthusiast
+Helping colleges improve through data insights 🚀
 
-NLP Techniques
-
-Data Visualization (Matplotlib, Seaborn, WordCloud)
-
-Survey Data Analysis
-
- Acknowledgements
-Internship at FUTURE INTERNS
-
-Project under Data Science & Analytics Internship
+📄 License
+This project is for academic and educational use. Feel free to reuse or modify it with credit.
 
 
+---
+
+Let me know if you want:
+- The file as downloadable `README.md`
+- Sample `feedback.csv` format
+- A `.ipynb` Jupyter Notebook version of your script for direct usage in VS Code or Google Colab
