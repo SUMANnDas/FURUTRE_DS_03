@@ -90,24 +90,15 @@ Common suggestions: better time management, more variety, improved sound systems
 📝 How to Run
 Install dependencies:
 
-bash
-Copy
-Edit
 pip install pandas seaborn matplotlib textblob wordcloud
 python -m textblob.download_corpora
 Run the notebook:
 
 In VS Code or Jupyter:
 
-css
-Copy
-Edit
 main.ipynb
 Or in Python script:
 
-css
-Copy
-Edit
 main.py
 Place your CSV file in /data/feedback.csv
 
